@@ -1,11 +1,14 @@
 import express from 'express';
+import { myMiddleware } from './middlewares/my-middleware';
 
 const PORT = 3333; //Em caixa alta quando é algo de configuração
 
 const app = express();
 app.use(express.json());
 
-app.get('/products', (request, response) => {
+app.use(myMiddleware); //Middleware global
+
+app.get('/products', myMiddleware, (request, response) => {
   const { page, limit } = request.query;
   response.send(`${page}e${limit}`);
 });
