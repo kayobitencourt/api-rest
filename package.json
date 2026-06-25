@@ -1,0 +1,19 @@
+{
+  "name": "api-rest",
+  "version": "1.0.0",
+  "description": "API Restful, com Nodejs",
+  "main": "src/server.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kayobitencourt/api-rest.git"
+  },
+  "author": "Kayo Bitencourt",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/kayobitencourt/api-rest/issues"
+  },
+  "homepage": "https://github.com/kayobitencourt/api-rest#readme"
+}
