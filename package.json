@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "API Restful, com Nodejs",
   "main": "src/server.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kayobitencourt/api-rest.git"
@@ -15,5 +14,9 @@
   "bugs": {
     "url": "https://github.com/kayobitencourt/api-rest/issues"
   },
-  "homepage": "https://github.com/kayobitencourt/api-rest#readme"
+  "homepage": "https://github.com/kayobitencourt/api-rest#readme",
+  "devDependencies": {
+    "@types/node": "^20.14.12",
+    "typescript": "^5.5.4"
+  }
 }
