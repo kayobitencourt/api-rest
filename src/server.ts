@@ -1,5 +1,7 @@
 import express, { Request, Response, NextFunction } from 'express';
+
 import { routes } from './routes';
+import { AppError } from './utils/AppError';
 
 const PORT = 3333; //Em caixa alta quando é algo de configuração
 
@@ -10,6 +12,10 @@ app.use(routes);
 
 //Para lidar com exeções que acontecerem em qualquer outro lugar.
 app.use((error: any, request: Request, response: Response, next: NextFunction) => {
+  if (error instanceof AppError) {
+    return response.status(error.statusCode).json({ message: error.message });
+  }
+
   response.status(500).json({ message: error.message });
 });
 
